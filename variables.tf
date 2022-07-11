@@ -12,3 +12,7 @@ variable "app_service_plan_name" {
   type        = string
   description = "name of the app service plan"
 }
+variable "ENV" {
+  description = "Env var"
+  type        = string
+}
