@@ -8,7 +8,7 @@ variable "resource_group_location" {
   description = "location "
 }
 
-variable "app_service_plan_name" {
+variable "azurerm_service_plan_name" {
   type        = string
   description = "name of the app service plan"
 }
