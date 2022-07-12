@@ -3,5 +3,5 @@ output "resource_group_name" {
 }
 
 output "azurerm_app_service_name" {
-    value = "https://${azurerm_app_service.app_service.name}.azurewebsites.net"
+  value = "https://${azurerm_app_service.app_service.name}.azurewebsites.net"
 }
