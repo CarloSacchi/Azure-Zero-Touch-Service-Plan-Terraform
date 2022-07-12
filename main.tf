@@ -17,3 +17,10 @@ resource "azurerm_service_plan" "app_service_plan" {
     azurerm_resource_group.rg
   ]
 }
+resource "azurerm_linux_web_app" "app_service" {
+  name                      = "${var.ENV}-${var.azurerm_app_service_name}"
+  location                  = var.resource_group_location
+  resource_group_name       = azurerm_resource_group.rg.name
+  azurerm_service_plan_name = azurerm_service_plan_name.app_service_plan.name
+  site_config {}
+}
