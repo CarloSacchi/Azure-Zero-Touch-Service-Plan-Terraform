@@ -13,5 +13,7 @@ resource "azurerm_service_plan" "app_service_plan" {
   resource_group_name = var.resource_group_name
   os_type             = "Linux"
   sku_name            = "FREE"
-  depends_on          = [data.azurerm_resource_group.rm]
+  depends_on = [
+    azurerm_resource_group.rg
+  ]
 }
